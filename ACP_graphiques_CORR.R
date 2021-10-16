@@ -87,7 +87,7 @@ BaseACP_SPEI <- BaseACP %>% select(Engrais_variable,"SPEI_value","drought","drou
 BaseACP_CHIRPS_days <- BaseACP %>% select(Engrais_variable,"NbRainyDays", "EC_nbJOURS","EC_nbVOLUME","EC_nbJOURS_choc",    "EC_nbVOLUME_choc","EC_nbJOURS_choc_1","EC_nbJOURS_choc_2","EC_nbJOURS_choc_3","EC_nbJOURS_choc_4" ,       "EC_nbJOURS_choc_5","EC_nbJOURS_1","EC_nbJOURS_2","EC_nbJOURS_3","EC_nbJOURS_4","EC_nbJOURS_5" )
 BaseACP_CHIRPS_volume <- BaseACP %>% select(Engrais_variable,"Precipitations", "EC_nbVOLUME","EC_nbVOLUME_1","EC_nbVOLUME_2","EC_nbVOLUME_3","EC_nbVOLUME_4","EC_nbVOLUME_5",
    
-# on va créer une fonction qui crée une nouvelle variable d'intéraction pour les                              
+# on va créer une fonction qui crée une nouvelle variable d'intéraction                             
 
 CHIRPS_days <- c("EC_nbJOURS")
 
@@ -118,17 +118,10 @@ for (Variable in seq(1,1)) {
       
 baseDonnées[,"Blou"] <- 1                                      
                                             
-                                            
-                                            "EC_nbJOURS_choc",          "EC_nbVOLUME_choc","EC_nbJOURS_choc_1","EC_nbJOURS_choc_2","EC_nbJOURS_choc_3","EC_nbJOURS_choc_4" ,       "EC_nbJOURS_choc_5","EC_nbJOURS_1","EC_nbJOURS_2","EC_nbJOURS_3","EC_nbJOURS_4","EC_nbJOURS_5" )
-
+                                           
 PCAshiny(BaseACP_CHIRPS_days)
 
-
-
 PCAshiny(BaseACP_SPEI)
-
-
-
 
 
 
@@ -146,10 +139,6 @@ cor(x = BaseCylindrage_bis[,c("perNB_OCC","Organic_per_acres","Chemical_per_acre
 
 cor.test(x = BaseCylindrage_bis$Organic_per_acres[BaseCylindrage_bis$Any_Fertilizer],
          y = BaseCylindrage_bis$Chemical_per_acres[BaseCylindrage_bis$Any_Fertilizer != NA])
-
-
-
-
 
 
 
